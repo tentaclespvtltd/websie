@@ -1,0 +1,53 @@
+📄 README.md
+📄 next-env.d.ts
+📄 next.config.ts
+📄 package-lock.json
+📄 package.json
+📄 postcss.config.mjs
+📁 public
+│   📁 aerowis
+│   │   📄 aerowi.png
+│   │   📄 logo.png
+│   │   📄 mobile.png
+│   📄 appstore.png
+│   📄 favicon.svg
+│   📄 icons.svg
+│   📄 image.png
+│   📄 playstore.png
+│   📁 pzync
+│   │   📄 app.png
+│   📁 wabot
+│   │   📄 chat.png
+│   │   📄 wabot.png
+📁 src
+│   📁 app
+│   │   📁 about
+│   │   │   📄 page.tsx
+│   │   📁 case-studies
+│   │   │   📄 page.tsx
+│   │   📁 contact
+│   │   │   📄 page.tsx
+│   │   📁 engineering
+│   │   │   📁 ai
+│   │   │   │   📄 page.tsx
+│   │   │   📁 enterprise
+│   │   │   │   📄 page.tsx
+│   │   │   📁 mobile
+│   │   │   │   📄 page.tsx
+│   │   │   📁 web
+│   │   │   │   📄 page.tsx
+│   │   📄 layout.tsx
+│   │   📄 page.tsx
+│   │   📁 reviews
+│   │   │   📄 page.tsx
+│   │   📁 services
+│   │   │   📄 page.tsx
+│   │   📁 solutions
+│   │   │   📄 page.tsx
+│   📁 components
+│   │   📄 Footer.tsx
+│   │   📄 Navigation.tsx
+│   │   📄 Sections.tsx
+│   │   📄 Sections2.tsx
+│   📄 index.css
+📄 tsconfig.json

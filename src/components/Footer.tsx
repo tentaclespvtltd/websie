@@ -14,13 +14,13 @@ export default function Footer() {
           </p>
           <div className="text-[11px] font-mono text-muted-foreground/80 space-y-1.5">
             <p className="font-semibold text-text-main">HEADQUARTERS:</p>
-            <p>Room No. 204-B, TBI-GECW, First Floor,</p>
+            <p>204-B, TBI-GECW, First Floor,</p>
             <p>Amenity Block, Government Engineering College Wayanad,</p>
             <p>Thalappuzha, Mananthavady, Wayanad,</p>
             <p>Kerala – 670644, India</p>
           </div>
         </div>
-        
+
         <div>
           <h4 className="font-semibold mb-6 text-text-main font-mono text-xs uppercase tracking-widest">Directories</h4>
           <ul className="space-y-4 text-xs font-mono">
@@ -29,8 +29,8 @@ export default function Footer() {
             <li><Link href="/contact" className="hover:text-primary transition-colors">/contact</Link></li>
           </ul>
         </div>
-        
-        
+
+
         <div>
           <h4 className="font-semibold mb-6 text-text-main font-mono text-xs uppercase tracking-widest">Connection</h4>
           <ul className="space-y-4 text-xs font-mono">

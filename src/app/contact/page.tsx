@@ -9,7 +9,7 @@ export default function ContactPage() {
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setResult("Sending...");
-    
+
     const formData = new FormData(event.currentTarget);
     formData.append("access_key", "97663c4b-5adc-4713-9683-4258338b50dc");
 
@@ -29,7 +29,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white pb-20">
       <div className="max-w-[1200px] mx-auto px-6 pt-24">
-        
+
         {/* Intro */}
         <div className="mb-12">
           <div className="flex gap-1 mb-2">
@@ -49,11 +49,11 @@ export default function ContactPage() {
         </h1>
 
         <div className="grid md:grid-cols-12 gap-12 items-start border-t border-black/10 pt-12">
-          
+
           {/* Information Column */}
           <div className="md:col-span-5">
             <h2 className="text-2xl font-bold mb-8 tracking-tight">Official Details</h2>
-            
+
             <div className="space-y-8">
               <div>
                 <h3 className="text-[10px] font-bold uppercase tracking-[0.15em] mb-1.5 text-black/40">Direct Line</h3>
@@ -73,7 +73,7 @@ export default function ContactPage() {
                 <h3 className="text-[10px] font-bold uppercase tracking-[0.15em] mb-2.5 text-black/40">Registered Headquarters</h3>
                 <address className="text-base font-medium text-black/80 leading-relaxed not-italic">
                   <strong className="text-black block mb-1">Tentacles Private Limited</strong>
-                  Room No. 204-B, TBI-GECW, 1st Floor<br />
+                  204-B, TBI-GECW, 1st Floor<br />
                   Amenity Block, GEC Wayanad<br />
                   Thalappuzha, Mananthavady, Kerala – 670644<br />
                   India
@@ -92,12 +92,12 @@ export default function ContactPage() {
           {/* Form Column */}
           <div className="md:col-span-7 md:pl-10 border-t border-black/10 md:border-t-0 md:border-l pt-12 md:pt-0">
             <h2 className="text-2xl font-bold mb-8 tracking-tight">Send a Message</h2>
-            
+
             <form className="space-y-6" onSubmit={onSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="relative group">
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="name"
                     name="name"
                     required
@@ -108,10 +108,10 @@ export default function ContactPage() {
                     Your Name
                   </label>
                 </div>
-                
+
                 <div className="relative group">
-                  <input 
-                    type="email" 
+                  <input
+                    type="email"
                     id="email"
                     name="email"
                     required
@@ -126,8 +126,8 @@ export default function ContactPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="relative group">
-                  <input 
-                    type="tel" 
+                  <input
+                    type="tel"
                     id="phone"
                     name="phone"
                     className="w-full bg-transparent border-b border-black/20 py-2.5 text-lg font-bold tracking-tight text-black focus:outline-none focus:border-black transition-colors peer"
@@ -137,10 +137,10 @@ export default function ContactPage() {
                     Phone Number (Optional)
                   </label>
                 </div>
-                
+
                 <div className="relative group">
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     id="subject"
                     name="subject"
                     className="w-full bg-transparent border-b border-black/20 py-2.5 text-lg font-bold tracking-tight text-black focus:outline-none focus:border-black transition-colors peer"
@@ -153,7 +153,7 @@ export default function ContactPage() {
               </div>
 
               <div className="relative group mt-4">
-                <textarea 
+                <textarea
                   id="message"
                   name="message"
                   rows={3}
@@ -166,14 +166,14 @@ export default function ContactPage() {
               </div>
 
               <div className="pt-4 flex flex-col items-start gap-4">
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={result === "Sending..."}
                   className="inline-flex items-center justify-center px-8 py-4 bg-black text-white font-bold uppercase tracking-[0.15em] text-[10px] rounded-full hover:bg-black/80 hover:scale-105 transition-all w-full sm:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {result === "Sending..." ? "Sending..." : "Submit Request"} <ArrowRight className="ml-2 w-3.5 h-3.5" />
                 </button>
-                
+
                 {result && result !== "Sending..." && (
                   <p className={`text-[10px] font-bold uppercase tracking-[0.15em] ${result.includes('Success') ? 'text-green-600' : 'text-red-600'}`}>
                     {result}
@@ -182,7 +182,7 @@ export default function ContactPage() {
               </div>
             </form>
           </div>
-          
+
         </div>
       </div>
     </div>

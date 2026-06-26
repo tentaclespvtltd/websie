@@ -19,6 +19,11 @@
 │   │   📄 landing.png
 │   │   📄 logo.png
 │   📄 fortifier.png
+│   📁 founders
+│   │   📄 afnan.jpeg
+│   │   📄 razal.jpeg
+│   │   📄 shekil.jpeg
+│   │   📄 sneha.jpeg
 │   📄 gecw.png
 │   📄 icons.svg
 │   📄 image.png
@@ -69,6 +74,8 @@
 │   │   📄 Sections2.tsx
 │   📁 data
 │   │   📄 recent_deployments.json
+│   │   📄 team.json
+│   │   📄 testimonials.json
 │   │   📄 trusted_by.json
 │   │   📄 web_design_elements.json
 │   📄 index.css

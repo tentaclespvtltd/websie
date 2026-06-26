@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Razal Majeed",
+    "role": "CEO",
+    "image": "/founders/razal.jpeg",
+    "bio": "Focuses on corporate vision, operational strategy, and strategic industry collaborations."
+  },
+  {
+    "name": "Shekil Rahman",
+    "role": "CTO",
+    "image": "/founders/shekil.jpeg",
+    "bio": "Architect of high-scale software infrastructures and global engineering development."
+  },
+  {
+    "name": "Sneha Suresh",
+    "role": "COO",
+    "image": "/founders/sneha.jpeg",
+    "bio": "Manages engineering delivery, operational workflows, and client relations."
+  },
+  {
+    "name": "Muened Afnan",
+    "role": "CMO",
+    "image": "/founders/afnan.jpeg",
+    "bio": "Directs product narratives, user experiences, and overall enterprise brand identity."
+  }
+]

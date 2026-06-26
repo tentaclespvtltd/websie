@@ -1,5 +1,6 @@
 import { ArrowRight, Globe, Smartphone, Layout, Server, Shield, Zap, Users, CheckCircle2, Star, Bot } from 'lucide-react'
 import trustedCompanies from '@/data/trusted_by.json'
+import testimonials from '@/data/testimonials.json'
 
 export function TrustedBy() {
   return (
@@ -18,13 +19,13 @@ export function TrustedBy() {
               href={company.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center p-4 rounded-xl hover:bg-card hover:shadow-card border border-transparent hover:border-border-subtle transition-all duration-300"
+              className="flex items-center justify-center p-4"
             >
               {company.logo ? (
                 <img
                   src={company.logo}
                   alt={`${company.name}`}
-                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain"
                   style={{
                     width: (company as any).width ? `${(company as any).width}px` : 'auto',
                     height: (company as any).height ? `${(company as any).height}px` : '32px',
@@ -60,9 +61,6 @@ export function Services() {
 
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         <div className="mb-16">
-          <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary font-semibold text-xs mb-6 rounded-full">
-            Our Expertise
-          </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-text-main font-heading tracking-tight">Comprehensive Services</h2>
           <p className="text-base text-muted-foreground max-w-xl">
             Engineering digital systems built for performance, reliability, and long-term growth.
@@ -74,34 +72,13 @@ export function Services() {
             <Link
               key={i}
               href={s.path}
-              className={`group p-8 bg-card border ${s.isAi ? 'border-blue-500/20 hover:border-blue-500/40' : 'border-border-subtle/80 hover:border-primary/40'} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/[0.02] rounded-3xl relative overflow-hidden flex flex-col block`}
+              className={`group p-6 bg-card border ${s.isAi ? 'border-blue-500/20 hover:border-blue-500/40' : 'border-border-subtle hover:border-primary/30'} transition-all duration-300 rounded-xl relative flex flex-col`}
             >
-              {/* Subtle background glow on hover */}
-              <div className={`absolute top-0 right-0 w-32 h-32 ${s.isAi ? 'bg-blue-500/10' : 'bg-primary/5'} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none`}></div>
-
-              {/* AI Visual Things */}
-              {s.isAi && (
-                <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                  <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.08),transparent_60%)] transition-opacity duration-500 group-hover:opacity-100 opacity-40"></div>
-                  <div className="absolute top-12 right-12 w-2 h-2 bg-blue-500 rounded-full animate-ping opacity-60"></div>
-                  <div className="absolute top-24 right-28 w-1.5 h-1.5 bg-indigo-400 rounded-full animate-ping delay-300 opacity-40"></div>
-                  <div className="absolute top-20 right-8 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-50"></div>
-                  <svg className="absolute top-0 right-0 w-48 h-48 opacity-20 transition-transform duration-700 group-hover:scale-110 group-hover:-translate-y-2 group-hover:translate-x-2" viewBox="0 0 100 100">
-                    <line x1="70" y1="25" x2="50" y2="45" stroke="currentColor" strokeWidth="0.5" className="text-blue-500" />
-                    <line x1="70" y1="25" x2="85" y2="55" stroke="currentColor" strokeWidth="0.5" className="text-purple-500" />
-                    <line x1="50" y1="45" x2="85" y2="55" stroke="currentColor" strokeWidth="0.5" className="text-indigo-500" />
-                    <circle cx="70" cy="25" r="2" className="fill-blue-500/50" />
-                    <circle cx="50" cy="45" r="1.5" className="fill-indigo-500/50" />
-                    <circle cx="85" cy="55" r="2" className="fill-purple-500/50" />
-                  </svg>
-                </div>
-              )}
-
-              <div className={`relative z-10 w-12 h-12 ${s.isAi ? 'bg-blue-500/10 text-blue-600 group-hover:bg-blue-500/20' : 'bg-primary/10 text-primary group-hover:bg-primary/20'} rounded-xl flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110`}>
+              <div className={`relative z-10 w-12 h-12 ${s.isAi ? 'bg-blue-500/10 text-blue-600' : 'bg-primary/10 text-primary'} rounded-lg flex items-center justify-center mb-5`}>
                 {s.icon}
               </div>
-              <h3 className={`relative z-10 text-xl font-bold mb-3 font-heading text-text-main tracking-wide transition-colors ${s.isAi ? 'group-hover:text-blue-600' : 'group-hover:text-primary'}`}>{s.title}</h3>
-              <p className="relative z-10 text-muted-foreground mb-8 text-sm leading-relaxed flex-1">{s.desc}</p>
+              <h3 className={`relative z-10 text-lg font-bold mb-2 font-heading text-text-main tracking-wide transition-colors ${s.isAi ? 'group-hover:text-blue-600' : 'group-hover:text-primary'}`}>{s.title}</h3>
+              <p className="relative z-10 text-muted-foreground mb-6 text-sm leading-relaxed flex-1">{s.desc}</p>
 
               <div className={`relative z-10 flex items-center ${s.isAi ? 'text-blue-600' : 'text-primary'} text-sm font-semibold mt-auto border-t border-border-subtle/50 pt-4 transition-colors cursor-pointer`}>
                 Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -120,9 +97,6 @@ export function WhyTentacles() {
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-12 gap-16 items-center">
           <div className="lg:col-span-5">
-            <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary font-semibold text-xs mb-6 rounded-full">
-              Why Partner With Us
-            </div>
             <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-6 font-heading text-text-main tracking-tight">
               Engineering <br />Excellence.
             </h2>
@@ -160,59 +134,43 @@ export function WhyTentacles() {
 
 
 export function Testimonials() {
-  const testimonials = [
-    {
-      quote: "Tentacles transformed our internal operations with an incredibly fast, reliable platform. Their engineering quality and communication exceeded expectations.",
-      name: "Sarah Jenkins",
-      role: "CTO",
-      company: "Acme Corp",
-    },
-    {
-      quote: "We needed a scalable POS system capable of handling 10k+ daily transactions offline. They delivered a solution that hasn't dropped a single transaction.",
-      name: "David Chen",
-      role: "Director of Retail",
-      company: "tenRetail",
-    },
-    {
-      quote: "The migration to our new infrastructure was seamless. We instantly saw a 60% faster loading time which directly led to a 3.2x increase in our lead generation.",
-      name: "Emily Rodriguez",
-      role: "VP of Engineering",
-      company: "Fintech Growth",
-    }
-  ]
   return (
     <section className="py-24 bg-background border-b border-border-subtle relative">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-16">
-          <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary font-semibold text-xs mb-6 rounded-full">
-            Client Success Stories
-          </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 font-heading text-text-main tracking-tight">What Our Clients Say</h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <div
+            <a
+              href="https://www.google.com/search?sca_esv=b2b623efc307516e&sxsrf=APpeQnvsCLiga0NIjzGyk03TeBN4YZ6NPw:1782493158998&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_w88-G8GYPoY-8fjYGDzAsae6afXzoJaDjvMx2c5WkhcyoMohRk9w7lhDGVSrTlkYaw7RM0dgH8ggkMK1xmNzwVF6v1Q4t9JWrMNMXnj_bH55fDOTg%3D%3D&q=Tentacles+Private+Limited+Reviews&sa=X&ved=2ahUKEwjMxrm8sKWVAxWoxjgGHdqoNTIQ0bkNegQIQRAH&biw=1920&bih=961&dpr=1"
+              target="_blank"
+              rel="noopener noreferrer"
               key={i}
-              className="p-8 content-card flex flex-col relative hover:border-primary/20 transition-all"
+              className="p-6 content-card flex flex-col relative hover:shadow-md transition-all rounded-xl border border-border-subtle cursor-pointer group"
             >
-              <div className="text-primary mb-6 flex gap-1">
+              <div className="flex justify-between items-start mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                    {t.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">{t.name}</h4>
+                    <p className="text-xs text-muted-foreground mt-0.5">{t.role}, {t.company}</p>
+                  </div>
+                </div>
+                <div className="w-6 h-6 flex-shrink-0">
+                  <svg viewBox="0 0 48 48" className="w-full h-full"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-3">
                 {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-primary" />
+                  <Star key={j} className="w-4 h-4 fill-[#FBBC04] text-[#FBBC04]" />
                 ))}
               </div>
-              <p className="text-sm text-text-main mb-8 leading-relaxed flex-1">"{t.quote}"</p>
-
-              <div className="mt-auto flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                  {t.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className="font-bold text-text-main text-sm">{t.name}</h4>
-                  <p className="text-xs text-muted-foreground mt-0.5">{t.role}, {t.company}</p>
-                </div>
-              </div>
-            </div>
+              <p className="text-sm text-text-main leading-relaxed flex-1">"{t.quote}"</p>
+            </a>
           ))}
         </div>
       </div>

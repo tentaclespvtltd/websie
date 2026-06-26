@@ -18,9 +18,6 @@ export function ProcessTimeline() {
     <section className="py-24 bg-card border-b border-border-subtle relative">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="mb-16 text-center md:text-left">
-           <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary font-semibold text-xs mb-6 rounded-full">
-              Our Methodology
-           </div>
            <h2 className="text-3xl lg:text-4xl font-bold mb-4 font-heading text-text-main tracking-tight">How We Build</h2>
         </div>
         

@@ -1,0 +1,20 @@
+[
+  {
+    "quote": "We needed a reliable software solution to maintain our operations at Aerowis Aviation, and they delivered exactly what we were looking for.",
+    "name": "Sabith",
+    "role": "Founder",
+    "company": "Aerowis Aviation"
+  },
+  {
+    "quote": "Tentacles transformed our internal operations with an incredibly fast, reliable platform. Their engineering quality and communication exceeded expectations.",
+    "name": "Sarah Jenkins",
+    "role": "CTO",
+    "company": "Acme Corp"
+  },
+  {
+    "quote": "We needed a scalable POS system capable of handling 10k+ daily transactions offline. They delivered a solution that hasn't dropped a single transaction.",
+    "name": "David Chen",
+    "role": "Director of Retail",
+    "company": "tenRetail"
+  }
+]

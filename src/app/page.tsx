@@ -19,7 +19,7 @@ export default function HomePage() {
 
 function HeroSection() {
   return (
-    <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 bg-background overflow-hidden border-b border-border-subtle">
+    <section className="relative pt-20 pb-16 lg:pt-28 lg:pb-20 bg-background overflow-hidden border-b border-border-subtle">
       {/* Background Shapes */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -z-10 pointer-events-none translate-x-1/3 -translate-y-1/4"></div>
       <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none -translate-x-1/2"></div>
@@ -41,8 +41,7 @@ function HeroSection() {
           </h1>
 
           <p className="text-base md:text-lg text-muted-foreground mb-12 leading-relaxed max-w-2xl">
-            We design and engineer custom software — no templates, no rigid platforms — tailored to how your business actually operates and built to scale as you grow.
-          </p>
+            We build custom software from the ground up, designed specifically for how your business works. No off-the-shelf templates, no forcing your operations into someone else's platform. Every line of code is tailored to your needs, and built to grow with you as your business scales</p>
 
           <button className="inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white bg-primary hover:bg-primary/90 transition-all rounded-full shadow-lg hover:shadow-xl hover:shadow-primary/20 cursor-pointer">
             Let's Talk About Your Goals

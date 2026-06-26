@@ -31,6 +31,7 @@
   /* shadcn animation keyframes */
   --animate-in: enter 0.2s ease-out;
   --animate-out: exit 0.15s ease-in;
+  --animate-marquee: marquee 30s linear infinite;
 
   @keyframes enter {
     from {
@@ -43,6 +44,15 @@
     to {
       opacity: var(--tw-exit-opacity, 1);
       transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+    }
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
     }
   }
 }
@@ -98,5 +108,10 @@
     border: 1px solid #E4E4E7;
     border-radius: var(--radius-2xl);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+  }
+
+  .mask-gradient-horizontal {
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
   }
 }

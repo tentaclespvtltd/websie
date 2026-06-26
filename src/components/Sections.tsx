@@ -3,42 +3,46 @@ import trustedCompanies from '@/data/trusted_by.json'
 import testimonials from '@/data/testimonials.json'
 
 export function TrustedBy() {
+  // Triple the array to make it scroll seamlessly on all viewport sizes
+  const doubledCompanies = [...trustedCompanies, ...trustedCompanies, ...trustedCompanies]
+
   return (
-    <section className="py-20 bg-background relative border-b border-border-subtle">
+    <section className="py-16 bg-background relative border-b border-border-subtle overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 text-center">
-        <p className="text-sm font-semibold text-text-main mb-12 uppercase tracking-widest flex items-center justify-center gap-4">
+        <p className="text-sm font-semibold text-text-main mb-10 uppercase tracking-widest flex items-center justify-center gap-4">
           <span className="w-12 h-px bg-border-subtle"></span>
           Trusted by Innovative Companies
           <span className="w-12 h-px bg-border-subtle"></span>
         </p>
 
-        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-10">
-          {trustedCompanies.map((company, j) => (
-            <a
-              key={j}
-              href={company.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center p-4"
-            >
-              {company.logo ? (
-                <img
-                  src={company.logo}
-                  alt={`${company.name}`}
-                  className="object-contain"
-                  style={{
-                    width: (company as any).width ? `${(company as any).width}px` : 'auto',
-                    height: (company as any).height ? `${(company as any).height}px` : '32px',
-                    marginTop: (company as any).marginTop ? `${(company as any).marginTop}px` : '0'
-                  }}
-                />
-              ) : (
-                <span className="text-lg font-bold text-text-main transition-colors duration-300 group-hover:text-primary whitespace-nowrap">
-                  {company.name}
-                </span>
-              )}
-            </a>
-          ))}
+        {/* Seamless Infinite Slider (Marquee) */}
+        <div className="relative w-full overflow-hidden mask-gradient-horizontal">
+          <div className="flex gap-16 items-center w-max animate-marquee py-3">
+            {doubledCompanies.map((company, j) => (
+              <a
+                key={j}
+                href={company.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center shrink-0 transition-all duration-300 hover:scale-105"
+              >
+                {company.logo ? (
+                  <img
+                    src={company.logo}
+                    alt={`${company.name}`}
+                    className="object-contain max-w-[110px] max-h-[30px]"
+                    style={{
+                      marginTop: company.name === "Aerowis Aviation" ? "0" : (company as any).marginTop ? `${(company as any).marginTop}px` : '0'
+                    }}
+                  />
+                ) : (
+                  <span className="text-sm font-bold text-text-main tracking-wider uppercase font-mono">
+                    {company.name}
+                  </span>
+                )}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

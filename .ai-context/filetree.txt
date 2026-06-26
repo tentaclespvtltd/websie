@@ -26,7 +26,6 @@
 │   │   📄 shekil.jpeg
 │   │   📄 sneha.jpeg
 │   📄 gecw.png
-│   📄 icons.svg
 │   📄 image.png
 │   📁 phloat
 │   │   📄 logo.png

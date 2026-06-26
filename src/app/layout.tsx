@@ -6,6 +6,9 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   title: 'Tentacles Pvt. Ltd.',
   description: "Engineering Tomorrow's Digital Infrastructure. We build robust, enterprise software systems that scale dynamically.",
+  icons: {
+    icon: '/favicon.svg'
+  }
 }
 
 export default function RootLayout({

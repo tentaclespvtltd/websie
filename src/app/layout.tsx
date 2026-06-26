@@ -53,6 +53,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="ISX45y-Qs1Vb7vBxzhGVQ1u_l62XS2RJR0dTkmLFtdQ" />
+      </head>
       <body className="min-h-screen flex flex-col font-sans bg-[#FAFAFB] text-[#09090B] antialiased">
         <Navigation />
         <main className="flex-grow pt-24">

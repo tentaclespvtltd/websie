@@ -49,7 +49,7 @@ export default function ReviewsPage() {
 
               <div className="flex items-center justify-between mb-6 relative z-10">
                 <div className="flex gap-1">
-                  {[...Array(review.rating || 5)].map((_, i) => (
+                  {[...Array(Math.floor(review.rating || 5))].map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                   ))}
                 </div>

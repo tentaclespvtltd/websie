@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import { Star, ArrowRight } from 'lucide-react'
+import recentDeployments from '@/data/recent_deployments.json'
+import webDesignElements from '@/data/web_design_elements.json'
+import { SearchAnimation } from '@/components/SearchAnimation'
 
 export default function WebEngineeringPage() {
   return (
@@ -17,6 +20,8 @@ export default function WebEngineeringPage() {
           </Link>
         </div>
 
+        <SearchAnimation />
+
         {/* Hero Hook */}
         <h1 className="text-6xl md:text-8xl lg:text-[7.5rem] font-bold tracking-tighter leading-[0.95] mb-32 max-w-5xl">
           Your website is your shop.<br />
@@ -31,11 +36,7 @@ export default function WebEngineeringPage() {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {[
-              { name: 'Fortifier', url: 'https://fortifier.com.au/', type: 'Corporate Web Platform' },
-              { name: 'Ronzev', url: 'https://ronzev.in/', type: 'E-Commerce / Brand Site' },
-              { name: 'GECW College Union', url: 'http://collegeunion.gecwyd.ac.in/', type: 'Institutional Portal' }
-            ].map((site, i) => (
+            {recentDeployments.map((site, i) => (
               <div key={i} className="flex flex-col group">
                 {/* Browser Mockup */}
                 <div className="bg-[#F1F1F1] rounded-t-2xl p-3 flex items-center gap-2 border border-black/10 border-b-0">
@@ -49,25 +50,33 @@ export default function WebEngineeringPage() {
                   </div>
                 </div>
                 
-                {/* Iframe Container with 4:3 Aspect Ratio */}
-                <div className="w-full pt-[75%] bg-black/5 border border-black/10 rounded-b-2xl overflow-hidden relative group-hover:border-black/30 transition-colors shadow-sm group-hover:shadow-xl group-hover:shadow-black/5 duration-500">
+                {/* Iframe or Capture Container with 16:10 Aspect Ratio */}
+                <div className="w-full pt-[62.5%] bg-black/5 border border-black/10 rounded-b-2xl overflow-hidden relative group-hover:border-black/30 transition-colors shadow-sm group-hover:shadow-xl group-hover:shadow-black/5 duration-500">
                   <a href={site.url} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-10 flex items-center justify-center bg-black/0 group-hover:bg-black/10 transition-all duration-300 backdrop-blur-0 group-hover:backdrop-blur-[2px]">
                     <div className="opacity-0 group-hover:opacity-100 bg-black text-white px-6 py-3 rounded-full font-bold text-xs tracking-widest uppercase shadow-xl transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 flex items-center gap-2">
                       Visit Site <ArrowRight className="w-3 h-3" />
                     </div>
                   </a>
                   
-                  {/* Scaled iframe: 4x size scaled down to 25% */}
-                  <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none bg-white">
-                    <iframe 
-                      src={site.url} 
-                      title={site.name}
-                      className="w-full h-full border-none"
-                      loading="lazy"
-                      scrolling="no"
-                      tabIndex={-1}
+                  {site.capture ? (
+                    <img 
+                      src={site.capture} 
+                      alt={site.name}
+                      className="absolute inset-0 w-full h-full object-cover object-top"
                     />
-                  </div>
+                  ) : (
+                    /* Scaled iframe: 4x size scaled down to 25% */
+                    <div className="absolute top-0 left-0 w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none bg-white">
+                      <iframe 
+                        src={site.url} 
+                        title={site.name}
+                        className="w-full h-full border-none"
+                        loading="lazy"
+                        scrolling="no"
+                        tabIndex={-1}
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <div className="mt-6 px-2">
@@ -90,39 +99,15 @@ export default function WebEngineeringPage() {
 
           <div className="md:col-span-7">
             <div className="grid sm:grid-cols-2 gap-x-12 gap-y-16">
-              
-              <div>
-                <h3 className="text-xs font-bold uppercase tracking-[0.15em] mb-4 text-black/40">Branding & Signage</h3>
-                <h4 className="text-2xl font-bold mb-3 tracking-tight">Visual Identity</h4>
-                <p className="text-black/70 leading-relaxed text-lg">
-                  The logo, colors, and typography that make people instantly recognize and trust your business.
-                </p>
-              </div>
-              
-              <div>
-                <h3 className="text-xs font-bold uppercase tracking-[0.15em] mb-4 text-black/40">Store Layout & Aisles</h3>
-                <h4 className="text-2xl font-bold mb-3 tracking-tight">Site Structure & Navigation</h4>
-                <p className="text-black/70 leading-relaxed text-lg">
-                  Can visitors find what they need in seconds, or do they get lost? Clean architecture ensures smooth browsing.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xs font-bold uppercase tracking-[0.15em] mb-4 text-black/40">Helpful Staff Greeting</h3>
-                <h4 className="text-2xl font-bold mb-3 tracking-tight">UX & Calls-to-Action</h4>
-                <p className="text-black/70 leading-relaxed text-lg">
-                  Does the site naturally guide visitors toward booking or buying, or leave them confused?
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-xs font-bold uppercase tracking-[0.15em] mb-4 text-black/40">Accessible Entrances</h3>
-                <h4 className="text-2xl font-bold mb-3 tracking-tight">Responsive Design</h4>
-                <p className="text-black/70 leading-relaxed text-lg">
-                  Whether they walk in from a desktop, tablet, or phone, the experience must be flawless.
-                </p>
-              </div>
-
+              {webDesignElements.map((element, i) => (
+                <div key={i}>
+                  <h3 className="text-xs font-bold uppercase tracking-[0.15em] mb-4 text-black/40">{element.category}</h3>
+                  <h4 className="text-2xl font-bold mb-3 tracking-tight">{element.title}</h4>
+                  <p className="text-black/70 leading-relaxed text-lg">
+                    {element.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

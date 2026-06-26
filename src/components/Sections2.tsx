@@ -111,58 +111,6 @@ export function ImpactCounters() {
   )
 }
 
-export function Insights() {
-  return (
-    <section className="py-24 bg-card border-b border-border-subtle">
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-12 border-b border-border-subtle pb-8 gap-4">
-          <div>
-            <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary font-semibold text-xs mb-6 rounded-full">
-              Latest Insights
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold font-heading text-text-main tracking-tight">Articles & News</h2>
-          </div>
-          <button className="inline-flex items-center text-primary text-sm font-semibold hover:text-text-main transition-colors cursor-pointer">
-            View All Articles <ArrowRight className="ml-2 w-4 h-4" />
-          </button>
-        </div>
-        
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            {
-              cat: 'Engineering',
-              date: 'Oct 12, 2026',
-              title: 'Migrating from Monolith to Microservices: A Practical Guide',
-              desc: 'How we helped Acme Corp transition to a scalable Kubernetes architecture without downtime.',
-            },
-            {
-              cat: 'Product',
-              date: 'Sep 28, 2026',
-              title: 'Designing for Scale: UI/UX Principles for Enterprise Applications',
-              desc: 'Why dense information architectures require a completely different design approach than consumer apps.',
-            }
-          ].map((post, i) => (
-            <div 
-              key={i}
-              className="group cursor-pointer content-card p-8 flex flex-col hover:border-primary/30 hover:shadow-card transition-all"
-            >
-              <div className="flex items-center justify-between border-b border-border-subtle pb-4 mb-4 select-none">
-                <span className="text-xs font-semibold text-primary uppercase tracking-wider">{post.cat}</span>
-                <span className="text-xs text-muted-foreground">{post.date}</span>
-              </div>
-              <h3 className="text-xl font-bold mb-3 font-heading text-text-main flex items-start group-hover:text-primary transition-colors tracking-wide">
-                {post.title}
-                <ArrowUpRight className="w-5 h-5 ml-2 mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity text-primary shrink-0" />
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{post.desc}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
 export function FAQ() {
   const faqs = [
     { q: 'How long does development take?', a: 'Development timelines vary based on complexity. A typical enterprise application takes 3-6 months from discovery to initial deployment, while smaller platforms may take 6-8 weeks.' },

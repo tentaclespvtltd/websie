@@ -1,0 +1,20 @@
+[
+  { 
+    "name": "Fortifier", 
+    "url": "https://fortifier.com.au/", 
+    "type": "Corporate Web Platform",
+    "capture": "/fortifier.png"
+  },
+  { 
+    "name": "Ronzev", 
+    "url": "https://ronzev.in/", 
+    "type": "E-Commerce / Brand Site",
+    "capture": "/ronzev.png"
+  },
+  { 
+    "name": "GECW College Union", 
+    "url": "http://collegeunion.gecwyd.ac.in/", 
+    "type": "Institutional Portal",
+    "capture": "/gecw.png"
+  }
+]

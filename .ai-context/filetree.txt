@@ -11,11 +11,16 @@
 │   │   📄 mobile.png
 │   📄 appstore.png
 │   📄 favicon.svg
+│   📁 fortifier
+│   │   📄 landing.png
+│   📄 fortifier.png
+│   📄 gecw.png
 │   📄 icons.svg
 │   📄 image.png
 │   📄 playstore.png
 │   📁 pzync
 │   │   📄 app.png
+│   📄 ronzev.png
 │   📁 wabot
 │   │   📄 chat.png
 │   │   📄 wabot.png
@@ -47,7 +52,12 @@
 │   📁 components
 │   │   📄 Footer.tsx
 │   │   📄 Navigation.tsx
+│   │   📄 SearchAnimation.tsx
 │   │   📄 Sections.tsx
 │   │   📄 Sections2.tsx
+│   📁 data
+│   │   📄 recent_deployments.json
+│   │   📄 trusted_by.json
+│   │   📄 web_design_elements.json
 │   📄 index.css
 📄 tsconfig.json

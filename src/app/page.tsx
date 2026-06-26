@@ -1,6 +1,6 @@
 import { MoreHorizontal, ArrowUp } from 'lucide-react'
 import { TrustedBy, Services, WhyTentacles, Testimonials, FinalCTA } from '@/components/Sections'
-import { ProcessTimeline, Industries, ImpactCounters, Insights, FAQ } from '@/components/Sections2'
+import { ProcessTimeline, FAQ } from '@/components/Sections2'
 
 export default function HomePage() {
   return (
@@ -11,9 +11,6 @@ export default function HomePage() {
       <WhyTentacles />
       <ProcessTimeline />
       <Testimonials />
-      <Industries />
-      <ImpactCounters />
-      <Insights />
       <FAQ />
       <FinalCTA />
     </div>

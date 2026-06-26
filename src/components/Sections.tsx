@@ -1,4 +1,5 @@
 import { ArrowRight, Globe, Smartphone, Layout, Server, Shield, Zap, Users, CheckCircle2, Star, Bot } from 'lucide-react'
+import trustedCompanies from '@/data/trusted_by.json'
 
 export function TrustedBy() {
   return (
@@ -11,12 +12,12 @@ export function TrustedBy() {
       <div className="flex w-[200%] animate-[slide_30s_linear_infinite]">
         {[...Array(2)].map((_, i) => (
           <div key={i} className="flex-1 flex justify-around items-center opacity-60">
-            {['Aerowis', 'tenPOS'].map((name, j) => (
+            {trustedCompanies.map((company, j) => (
               <span key={j} className="text-lg font-bold text-text-main flex items-center gap-2 transition-all duration-200">
-                {name === 'Aerowis' ? (
-                  <img src="/aerowis.png" alt="Aerowis Logo" className="h-7 w-auto object-contain brightness-0 hover:brightness-100 opacity-70 hover:opacity-100 transition-all duration-300" />
+                {company.logo ? (
+                  <img src={company.logo} alt={`${company.name} Logo`} className="h-7 w-auto object-contain brightness-0 hover:brightness-100 opacity-70 hover:opacity-100 transition-all duration-300" />
                 ) : (
-                  <span className="hover:text-primary opacity-60 hover:opacity-100 transition-all">{name}</span>
+                  <span className="hover:text-primary opacity-60 hover:opacity-100 transition-all">{company.name}</span>
                 )}
               </span>
             ))}

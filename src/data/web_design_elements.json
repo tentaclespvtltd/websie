@@ -1,0 +1,22 @@
+[
+  {
+    "category": "Branding & Signage",
+    "title": "Visual Identity",
+    "description": "The logo, colors, and typography that make people instantly recognize and trust your business."
+  },
+  {
+    "category": "Store Layout & Aisles",
+    "title": "Site Structure & Navigation",
+    "description": "Can visitors find what they need in seconds, or do they get lost? Clean architecture ensures smooth browsing."
+  },
+  {
+    "category": "Helpful Staff Greeting",
+    "title": "UX & Calls-to-Action",
+    "description": "Does the site naturally guide visitors toward booking or buying, or leave them confused?"
+  },
+  {
+    "category": "Accessible Entrances",
+    "title": "Responsive Design",
+    "description": "Whether they walk in from a desktop, tablet, or phone, the experience must be flawless."
+  }
+]

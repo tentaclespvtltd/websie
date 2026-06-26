@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function Footer() {
   return (
     <footer className="bg-card text-muted-foreground py-20 border-t border-border-subtle/80">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div className="lg:col-span-2">
           <div className="flex items-center gap-2 mb-6">
             <img src="/image.png" alt="Tentacles Logo" className="h-8 w-auto object-contain" />
@@ -26,18 +26,10 @@ export default function Footer() {
           <ul className="space-y-4 text-xs font-mono">
             <li><Link href="/about" className="hover:text-primary transition-colors">/about</Link></li>
             <li><Link href="/services" className="hover:text-primary transition-colors">/services</Link></li>
-            <li><Link href="/case-studies" className="hover:text-primary transition-colors">/case-studies</Link></li>
             <li><Link href="/contact" className="hover:text-primary transition-colors">/contact</Link></li>
           </ul>
         </div>
         
-        <div>
-          <h4 className="font-semibold mb-6 text-text-main font-mono text-xs uppercase tracking-widest">Security</h4>
-          <ul className="space-y-4 text-xs font-mono">
-            <li><Link href="/" className="hover:text-primary transition-colors">privacy.md</Link></li>
-            <li><Link href="/" className="hover:text-primary transition-colors">terms.md</Link></li>
-          </ul>
-        </div>
         
         <div>
           <h4 className="font-semibold mb-6 text-text-main font-mono text-xs uppercase tracking-widest">Connection</h4>

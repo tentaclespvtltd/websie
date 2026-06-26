@@ -3,11 +3,19 @@
 import { useState, useEffect } from 'react'
 import { Search, Monitor } from 'lucide-react'
 
+const SEARCH_QUERIES = [
+  "best web engineering agency",
+  "best shopping website",
+  "customer friendly web design",
+  "attractive e-commerce platforms"
+]
+
 export function SearchAnimation() {
   const [phase, setPhase] = useState<'initial' | 'typing' | 'searching' | 'results' | 'clicking' | 'done'>('initial')
   const [typedText, setTypedText] = useState('')
+  const [queryIndex, setQueryIndex] = useState(0)
   
-  const targetText = "best web engineering agency"
+  const targetText = SEARCH_QUERIES[queryIndex]
 
   useEffect(() => {
     let timeout: NodeJS.Timeout
@@ -32,11 +40,12 @@ export function SearchAnimation() {
       timeout = setTimeout(() => {
         setPhase('initial')
         setTypedText('')
+        setQueryIndex((prev) => (prev + 1) % SEARCH_QUERIES.length)
       }, 4000)
     }
 
     return () => clearTimeout(timeout)
-  }, [phase, typedText])
+  }, [phase, typedText, targetText])
 
   return (
     <div className="w-full bg-white border border-black/10 rounded-[2.5rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] overflow-hidden mb-32 h-[500px] flex flex-col relative transition-all duration-700">

@@ -32,11 +32,13 @@
 │   📄 playstore.png
 │   📁 pzync
 │   │   📄 app.png
+│   📄 robots.txt
 │   📁 ronz
 │   │   📄 logo.png
 │   📄 ronzev.png
 │   📁 savants
 │   │   📄 logo.png
+│   📄 sitemap.xml
 │   📁 wabot
 │   │   📄 chat.png
 │   │   📄 wabot.png

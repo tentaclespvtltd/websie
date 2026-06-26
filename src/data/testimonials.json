@@ -3,18 +3,21 @@
     "quote": "We needed a reliable software solution to maintain our operations at Aerowis Aviation, and they delivered exactly what we were looking for.",
     "name": "Capt. Sabith Rahman",
     "role": "Founder",
-    "company": "Aerowis Aviation"
+    "company": "Aerowis Aviation",
+    "rating": 5
   },
   {
     "quote": "Tentacles transformed our internal operations with an incredibly fast, reliable platform. Their engineering quality and communication exceeded expectations.",
     "name": "Aanish",
     "role": "CEO",
-    "company": "Savans"
+    "company": "Savans",
+    "rating": 5
   },
   {
     "quote": "Tentacles designed a beautifully crafted, highly SEO-optimized web application that dramatically improved our organic reach and performance.",
     "name": "Athul",
     "role": "CEO",
-    "company": "Fortifier"
+    "company": "Fortifier",
+    "rating": 5
   }
 ]

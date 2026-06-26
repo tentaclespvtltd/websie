@@ -134,7 +134,7 @@ export default function ContactPage() {
                     placeholder=" "
                   />
                   <label htmlFor="phone" className="absolute left-0 top-3 text-lg font-bold tracking-tight text-black/40 peer-focus:-translate-y-6 peer-focus:text-[10px] peer-focus:uppercase peer-focus:tracking-[0.15em] peer-focus:text-black transition-all cursor-text peer-not-placeholder-shown:-translate-y-6 peer-not-placeholder-shown:text-[10px] peer-not-placeholder-shown:uppercase peer-not-placeholder-shown:tracking-[0.15em] peer-not-placeholder-shown:text-black">
-                    Phone Number
+                    Phone Number (Optional)
                   </label>
                 </div>
                 

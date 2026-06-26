@@ -2,24 +2,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #000000;
-  --color-primary-foreground: #FFFFFF;
+  --color-primary: #059669;
+  /* Refined emerald green for light mode */
   --color-accent: #10B981;
-  --color-accent-foreground: #09090B;
   --color-background: #FAFAFB;
-  --color-foreground: #09090B;
+  /* Off-white developer background */
   --color-card: #FFFFFF;
-  --color-card-foreground: #09090B;
-  --color-popover: #FFFFFF;
-  --color-popover-foreground: #09090B;
+  /* Pure white cards */
   --color-muted: #F3F4F6;
+  /* Gray-100 */
   --color-muted-foreground: #71717A;
+  /* Zinc-500 */
   --color-text-main: #09090B;
+  /* Dark charcoal */
   --color-border-subtle: #E4E4E7;
-  --color-input: #E4E4E7;
-  --color-ring: #09090B;
-  --color-destructive: #EF4444;
-  --color-destructive-foreground: #FAFAFA;
+  /* Zinc-200 */
 
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
@@ -27,24 +24,6 @@
 
   --radius-xl: 6px;
   --radius-2xl: 10px;
-
-  /* shadcn animation keyframes */
-  --animate-in: enter 0.2s ease-out;
-  --animate-out: exit 0.15s ease-in;
-
-  @keyframes enter {
-    from {
-      opacity: var(--tw-enter-opacity, 1);
-      transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
-    }
-  }
-
-  @keyframes exit {
-    to {
-      opacity: var(--tw-exit-opacity, 1);
-      transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
-    }
-  }
 }
 
 @layer base {

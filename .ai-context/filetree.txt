@@ -1,4 +1,5 @@
 📄 README.md
+📄 components.json
 📄 next-env.d.ts
 📄 next.config.ts
 📄 package-lock.json
@@ -69,9 +70,18 @@
 │   📁 components
 │   │   📄 Footer.tsx
 │   │   📄 Navigation.tsx
+│   │   📄 ScheduleDialog.tsx
 │   │   📄 SearchAnimation.tsx
 │   │   📄 Sections.tsx
 │   │   📄 Sections2.tsx
+│   │   📁 ui
+│   │   │   📄 button.tsx
+│   │   │   📄 calendar.tsx
+│   │   │   📄 dialog.tsx
+│   │   │   📄 input.tsx
+│   │   │   📄 label.tsx
+│   │   │   📄 popover.tsx
+│   │   │   📄 select.tsx
 │   📁 data
 │   │   📄 recent_deployments.json
 │   │   📄 team.json
@@ -79,4 +89,8 @@
 │   │   📄 trusted_by.json
 │   │   📄 web_design_elements.json
 │   📄 index.css
+│   📄 index.css.bak
+│   📁 lib
+│   │   📄 utils.ts
 📄 tsconfig.json
+📄 tsconfig.tsbuildinfo

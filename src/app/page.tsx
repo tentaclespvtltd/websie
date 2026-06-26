@@ -1,4 +1,5 @@
-import { MoreHorizontal, ArrowUp } from 'lucide-react'
+import { MoreHorizontal, ArrowUp, Terminal } from 'lucide-react'
+import Link from 'next/link'
 import { TrustedBy, Services, WhyTentacles, Testimonials, FinalCTA } from '@/components/Sections'
 import { ProcessTimeline, FAQ } from '@/components/Sections2'
 
@@ -43,9 +44,13 @@ function HeroSection() {
           <p className="text-base md:text-lg text-muted-foreground mb-12 leading-relaxed max-w-2xl">
             We build custom software from the ground up, designed specifically for how your business works. No off-the-shelf templates, no forcing your operations into someone else's platform. Every line of code is tailored to your needs, and built to grow with you as your business scales</p>
 
-          <button className="inline-flex items-center justify-center px-10 py-4 text-base font-bold text-white bg-primary hover:bg-primary/90 transition-all rounded-full shadow-lg hover:shadow-xl hover:shadow-primary/20 cursor-pointer">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-10 py-4 text-sm font-mono font-bold text-white bg-text-main border border-text-main rounded hover:bg-transparent hover:text-text-main transition-all uppercase tracking-wider"
+          >
+            <Terminal className="mr-2 w-4 h-4" />
             Let's Talk About Your Goals
-          </button>
+          </Link>
         </div>
       </div>
     </section>

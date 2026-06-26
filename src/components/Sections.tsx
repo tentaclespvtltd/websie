@@ -178,6 +178,8 @@ export function Testimonials() {
   )
 }
 
+import { ScheduleDialog } from './ScheduleDialog'
+
 export function FinalCTA() {
   return (
     <section className="py-24 bg-card text-text-main relative overflow-hidden">
@@ -201,9 +203,11 @@ export function FinalCTA() {
               Start Your Project
               <ArrowRight className="ml-2 w-4 h-4" />
             </button>
-            <button className="px-8 py-3 bg-transparent border border-border-subtle text-text-main font-semibold text-sm hover:bg-muted transition-all rounded-lg cursor-pointer">
-              Schedule Consultation
-            </button>
+            <ScheduleDialog>
+              <button className="px-8 py-3 bg-transparent border border-border-subtle text-text-main font-semibold text-sm hover:bg-muted transition-all rounded-lg cursor-pointer">
+                Schedule Consultation
+              </button>
+            </ScheduleDialog>
           </div>
         </div>
       </div>

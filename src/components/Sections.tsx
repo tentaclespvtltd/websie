@@ -3,26 +3,42 @@ import trustedCompanies from '@/data/trusted_by.json'
 
 export function TrustedBy() {
   return (
-    <section className="py-10 border-b border-border-subtle bg-card overflow-hidden relative">
-      <div className="max-w-[1200px] mx-auto px-6 mb-5 flex items-center justify-center">
-        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-          Trusted by innovative companies worldwide
+    <section className="py-20 bg-background relative border-b border-border-subtle">
+      <div className="max-w-[1200px] mx-auto px-6 text-center">
+        <p className="text-sm font-semibold text-text-main mb-12 uppercase tracking-widest flex items-center justify-center gap-4">
+          <span className="w-12 h-px bg-border-subtle"></span>
+          Trusted by Innovative Companies
+          <span className="w-12 h-px bg-border-subtle"></span>
         </p>
-      </div>
-      <div className="flex w-[200%] animate-[slide_30s_linear_infinite]">
-        {[...Array(2)].map((_, i) => (
-          <div key={i} className="flex-1 flex justify-around items-center opacity-60">
-            {trustedCompanies.map((company, j) => (
-              <span key={j} className="text-lg font-bold text-text-main flex items-center gap-2 transition-all duration-200">
-                {company.logo ? (
-                  <img src={company.logo} alt={`${company.name} Logo`} className="h-7 w-auto object-contain brightness-0 hover:brightness-100 opacity-70 hover:opacity-100 transition-all duration-300" />
-                ) : (
-                  <span className="hover:text-primary opacity-60 hover:opacity-100 transition-all">{company.name}</span>
-                )}
-              </span>
-            ))}
-          </div>
-        ))}
+
+        <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-10">
+          {trustedCompanies.map((company, j) => (
+            <a
+              key={j}
+              href={company.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center p-4 rounded-xl hover:bg-card hover:shadow-card border border-transparent hover:border-border-subtle transition-all duration-300"
+            >
+              {company.logo ? (
+                <img
+                  src={company.logo}
+                  alt={`${company.name}`}
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  style={{
+                    width: (company as any).width ? `${(company as any).width}px` : 'auto',
+                    height: (company as any).height ? `${(company as any).height}px` : '32px',
+                    marginTop: (company as any).marginTop ? `${(company as any).marginTop}px` : '0'
+                  }}
+                />
+              ) : (
+                <span className="text-lg font-bold text-text-main transition-colors duration-300 group-hover:text-primary whitespace-nowrap">
+                  {company.name}
+                </span>
+              )}
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   )
@@ -41,7 +57,7 @@ export function Services() {
   return (
     <section className="py-24 bg-background border-b border-border-subtle relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(5,150,105,0.01),transparent_40%)] pointer-events-none"></div>
-      
+
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         <div className="mb-16">
           <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary font-semibold text-xs mb-6 rounded-full">
@@ -52,10 +68,10 @@ export function Services() {
             Engineering digital systems built for performance, reliability, and long-term growth.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((s, i) => (
-            <Link 
+            <Link
               key={i}
               href={s.path}
               className={`group p-8 bg-card border ${s.isAi ? 'border-blue-500/20 hover:border-blue-500/40' : 'border-border-subtle/80 hover:border-primary/40'} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/[0.02] rounded-3xl relative overflow-hidden flex flex-col block`}
@@ -86,7 +102,7 @@ export function Services() {
               </div>
               <h3 className={`relative z-10 text-xl font-bold mb-3 font-heading text-text-main tracking-wide transition-colors ${s.isAi ? 'group-hover:text-blue-600' : 'group-hover:text-primary'}`}>{s.title}</h3>
               <p className="relative z-10 text-muted-foreground mb-8 text-sm leading-relaxed flex-1">{s.desc}</p>
-              
+
               <div className={`relative z-10 flex items-center ${s.isAi ? 'text-blue-600' : 'text-primary'} text-sm font-semibold mt-auto border-t border-border-subtle/50 pt-4 transition-colors cursor-pointer`}>
                 Learn More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
               </div>
@@ -108,13 +124,13 @@ export function WhyTentacles() {
               Why Partner With Us
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-6 font-heading text-text-main tracking-tight">
-              Engineering <br/>Excellence.
+              Engineering <br />Excellence.
             </h2>
             <p className="text-base text-muted-foreground max-w-sm leading-relaxed">
               We don't just write code. We build robust, scalable architectures that businesses depend on to operate at scale.
             </p>
           </div>
-          
+
           <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
             {[
               { title: 'Performance First', desc: 'Lightning fast applications optimized for the best user experience.', icon: <Zap className="w-5 h-5 text-primary" /> },
@@ -122,7 +138,7 @@ export function WhyTentacles() {
               { title: 'Transparent Collaboration', desc: 'Clear communication, agile processes, and zero surprises.', icon: <Users className="w-5 h-5 text-primary" /> },
               { title: 'Security by Design', desc: 'Enterprise-grade security protocols implemented from day one.', icon: <Shield className="w-5 h-5 text-primary" /> }
             ].map((feature, i) => (
-              <div 
+              <div
                 key={i}
                 className="p-6 bg-background border border-border-subtle hover:border-primary/30 transition-all duration-300 rounded-xl flex flex-col"
               >
@@ -173,23 +189,23 @@ export function Testimonials() {
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4 font-heading text-text-main tracking-tight">What Our Clients Say</h2>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <div 
+            <div
               key={i}
               className="p-8 content-card flex flex-col relative hover:border-primary/20 transition-all"
             >
               <div className="text-primary mb-6 flex gap-1">
-                 {[...Array(5)].map((_, j) => (
-                    <Star key={j} className="w-4 h-4 fill-primary" />
-                 ))}
+                {[...Array(5)].map((_, j) => (
+                  <Star key={j} className="w-4 h-4 fill-primary" />
+                ))}
               </div>
               <p className="text-sm text-text-main mb-8 leading-relaxed flex-1">"{t.quote}"</p>
-              
+
               <div className="mt-auto flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                   {t.name.charAt(0)}
+                  {t.name.charAt(0)}
                 </div>
                 <div>
                   <h4 className="font-bold text-text-main text-sm">{t.name}</h4>
@@ -212,25 +228,25 @@ export function FinalCTA() {
 
       <div className="max-w-[1200px] mx-auto px-6 relative z-10">
         <div className="content-card bg-background/50 p-8 lg:p-14 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
-           <div className="flex-1">
-             <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary font-semibold text-xs mb-6 rounded-full">
-                Get In Touch
-             </div>
-             <h2 className="text-2xl lg:text-3xl font-bold mb-4 font-heading tracking-tight">Ready to Transform Your Business?</h2>
-             <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
-               Let's talk about how our engineering team can architect and scale your next software product.
-             </p>
-           </div>
-           
-           <div className="w-full md:w-auto flex flex-col sm:flex-row gap-4">
-              <button className="px-8 py-3 bg-text-main text-white font-semibold text-sm hover:bg-transparent hover:text-text-main border border-text-main transition-all rounded-lg shadow-md cursor-pointer flex items-center justify-center">
-                 Start Your Project
-                 <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
-              <button className="px-8 py-3 bg-transparent border border-border-subtle text-text-main font-semibold text-sm hover:bg-muted transition-all rounded-lg cursor-pointer">
-                 Schedule Consultation
-              </button>
-           </div>
+          <div className="flex-1">
+            <div className="inline-flex items-center px-3 py-1 bg-primary/10 text-primary font-semibold text-xs mb-6 rounded-full">
+              Get In Touch
+            </div>
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4 font-heading tracking-tight">Ready to Transform Your Business?</h2>
+            <p className="text-base text-muted-foreground max-w-xl leading-relaxed">
+              Let's talk about how our engineering team can architect and scale your next software product.
+            </p>
+          </div>
+
+          <div className="w-full md:w-auto flex flex-col sm:flex-row gap-4">
+            <button className="px-8 py-3 bg-text-main text-white font-semibold text-sm hover:bg-transparent hover:text-text-main border border-text-main transition-all rounded-lg shadow-md cursor-pointer flex items-center justify-center">
+              Start Your Project
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
+            <button className="px-8 py-3 bg-transparent border border-border-subtle text-text-main font-semibold text-sm hover:bg-muted transition-all rounded-lg cursor-pointer">
+              Schedule Consultation
+            </button>
+          </div>
         </div>
       </div>
     </section>

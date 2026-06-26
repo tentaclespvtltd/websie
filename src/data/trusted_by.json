@@ -1,10 +1,43 @@
 [
   {
-    "name": "Aerowis",
-    "logo": "/aerowis/logo.png"
+    "name": "Fortifier",
+    "logo": "/fortifier/logo.png",
+    "website": "https://fortifier.com.au"
   },
   {
-    "name": "tenPOS",
-    "logo": null
+    "name": "Savants",
+    "logo": "/savants/logo.png",
+    "website": "https://www.instagram.com/savantsdcs",
+    "marginTop": 4,
+    "height": "40"
+  },
+  {
+    "name": "Aerowis Aviation",
+    "logo": "/aerowis/logo.png",
+    "website": "https://aerowis.com",
+    "height": 60,
+    "marginTop": -20
+  },
+  {
+    "name": "Ronz EV",
+    "logo": "/ronz/logo.png",
+    "website": "https://ronzev.in"
+  },
+  {
+    "name": "Phloat Clothing",
+    "logo": "/phloat/logo.png",
+    "website": "https://phloat.in",
+    "width": 100,
+    "height": 40
+  },
+  {
+    "name": "CHIC KICKS SNEAKERS",
+    "logo": "/chickicks/logo.png",
+    "website": "https://www.instagram.com/chickicks._/"
+  },
+  {
+    "name": "Burfi Cafe",
+    "logo": "/burfi/logo.png",
+    "website": "https://www.instagram.com/cafeburfi"
   }
 ]

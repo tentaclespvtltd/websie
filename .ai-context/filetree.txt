@@ -10,17 +10,28 @@
 │   │   📄 logo.png
 │   │   📄 mobile.png
 │   📄 appstore.png
+│   📁 burfi
+│   │   📄 logo.png
+│   📁 chickicks
+│   │   📄 logo.png
 │   📄 favicon.svg
 │   📁 fortifier
 │   │   📄 landing.png
+│   │   📄 logo.png
 │   📄 fortifier.png
 │   📄 gecw.png
 │   📄 icons.svg
 │   📄 image.png
+│   📁 phloat
+│   │   📄 logo.png
 │   📄 playstore.png
 │   📁 pzync
 │   │   📄 app.png
+│   📁 ronz
+│   │   📄 logo.png
 │   📄 ronzev.png
+│   📁 savants
+│   │   📄 logo.png
 │   📁 wabot
 │   │   📄 chat.png
 │   │   📄 wabot.png

@@ -2,14 +2,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #059669; /* Refined emerald green for light mode */
+  --color-primary: #059669;
+  /* Refined emerald green for light mode */
   --color-accent: #10B981;
-  --color-background: #FAFAFB; /* Off-white developer background */
-  --color-card: #FFFFFF; /* Pure white cards */
-  --color-muted: #F3F4F6; /* Gray-100 */
-  --color-muted-foreground: #71717A; /* Zinc-500 */
-  --color-text-main: #09090B; /* Dark charcoal */
-  --color-border-subtle: #E4E4E7; /* Zinc-200 */
+  --color-background: #FAFAFB;
+  /* Off-white developer background */
+  --color-card: #FFFFFF;
+  /* Pure white cards */
+  --color-muted: #F3F4F6;
+  /* Gray-100 */
+  --color-muted-foreground: #71717A;
+  /* Zinc-500 */
+  --color-text-main: #09090B;
+  /* Dark charcoal */
+  --color-border-subtle: #E4E4E7;
+  /* Zinc-200 */
 
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
@@ -26,8 +33,13 @@
     background-color: var(--color-background);
     scroll-behavior: smooth;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -44,7 +56,7 @@
   .shadow-soft {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
-  
+
   .shadow-card {
     box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 0 1px rgba(0, 0, 0, 0.08) inset;
   }
